@@ -64,7 +64,7 @@ for i in kelime:
     tahmin.append("_")
 print(tahmin)
 
-while adim < 6 and "_" in tahmin:   # 7 adam listesininin uzunluğu 
+while adim < 6 and "_" in tahmin:   # adam listesininin uzunluğu 7, index 6dan küçük olmalı 
     harf = input("Tahmininizi girin: ").upper()
     
     if harf in kelime:
