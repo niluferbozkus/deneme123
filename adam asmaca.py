@@ -1,6 +1,6 @@
 print( "       ADAM ASMACA OYUNU" )
 
-kelime = input("Tahmin ettirmek istediğiniz kelimeyi girin: ").upper()
+kelime = input("Tahmin ettirmek istediğiniz kelimeyi girin: ").lower()
 
 
 adam = ["""
@@ -65,14 +65,14 @@ for i in kelime:
 print(tahmin)
 
 while adim < 6 and "_" in tahmin:   # adam listesininin uzunluğu 7, index 6dan küçük olmalı 
-    harf = input("Tahmininizi girin: ").upper()
+    harf = input("Tahmininizi girin: ").lower()
     
     if harf in kelime:
         for index, h in enumerate(kelime):
             if harf == h:
                 tahmin[index] = harf             
-                print(adam[adim])
-                print(tahmin)        
+        print(adam[adim])
+        print(tahmin)        
     else:
         adim +=1
         print(adam[adim])
@@ -80,6 +80,7 @@ while adim < 6 and "_" in tahmin:   # adam listesininin uzunluğu 7, index 6dan 
         print(tahmin)
                 
 if adim < len(adam) and not "_" in tahmin:
-    print("Kazandınız!")
+    print(" Kazandınız! \n {} kelimesini doğru tahmin ettiniz.".format(kelime))
 else:
-    print("Kaybettiniz!")
+    print(" Kaybettiniz! \n Aradığınız kelime {} idi.".format(kelime))
+    
